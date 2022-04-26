@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1662305327573541152}
   - component: {fileID: 385562706462379240}
   - component: {fileID: 3628878317922683337}
-  - component: {fileID: 6576826594388853897}
+  - component: {fileID: 3221836908581218603}
+  - component: {fileID: 3569521350298188077}
   m_Layer: 0
   m_Name: Slime 1
   m_TagString: Enemy
@@ -153,7 +154,7 @@ MonoBehaviour:
   rigidbody2D: {fileID: 0}
   direction: {x: -1, y: 0}
   relativeToRotation: 1
---- !u!114 &6576826594388853897
+--- !u!114 &3221836908581218603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +163,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998612580618862028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c4adaf25c56477b836b81ad48e3bdb, type: 3}
+  m_Script: {fileID: 11500000, guid: bdab9334f9a2a4efe8c019b5d37595cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsWorth: 1
+  actions:
+  - {fileID: 3569521350298188077}
+  useCustomActions: 0
+  customActions:
+    m_PersistentCalls:
+      m_Calls: []
+  happenOnlyOnce: 0
+  filterByTag: 1
+  filterTag: Enemy
+--- !u!114 &3569521350298188077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998612580618862028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be840ffee03ed4abe9b3dc9b48f9cae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 1
+  deathEffect: {fileID: 0}
